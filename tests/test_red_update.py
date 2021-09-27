@@ -2,7 +2,7 @@ import pytest
 from app import *
 
 
-def test_red_update():
+def test_red_league():
     score1 = 10
     score2 = 20
     red_league.winner_score = []
@@ -16,5 +16,6 @@ def test_red_update():
         red_league.loser_score.append(score2)
 
 
-    red_league.winner_score = {score2} 
-    assert red_league.winner_score == {score2}
+    assert red_league.winner_score == [score2]
+    assert red_league.loser_score == [score1]
+
