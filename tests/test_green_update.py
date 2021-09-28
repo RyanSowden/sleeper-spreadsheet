@@ -2,7 +2,7 @@ import pytest
 from app import *
 
 
-def test_green_league ():
+def test_green_league():
     score1 = 10
     score2 = 20
     green_league.winner_score = []
