@@ -41,7 +41,6 @@ class red_league:
         self.score11 = self.red_scoreboards[6][0]
         self.score12 = self.red_scoreboards[6][1]
 
-        #self.results = {score1,score2,score3,score4,score5,score6}
 
         self.winner_name = []
         self.loser_name = []
@@ -164,7 +163,6 @@ class green_league:
         self.score11 = self.green_scoreboards[6][0]
         self.score12 = self.green_scoreboards[6][1]
 
-        #self.results = {score1,score2,score3,score4,score5,score6}
 
         self.winner_name = []
         self.loser_name = []
@@ -260,6 +258,7 @@ class green_league:
         for i, val in enumerate(self.loser_score):
             self.loser_score_cell[i].value = val
             sh.update_cells(self.loser_score_cell)
+        time.sleep(60)
 
 class black_league:
 
@@ -384,7 +383,6 @@ class black_league:
         for i, val in enumerate(self.loser_score):
             self.loser_score_cell[i].value = val
             sh.update_cells(self.loser_score_cell)
-        time.sleep(60)
 
 class blue_league:
 
@@ -508,6 +506,7 @@ class blue_league:
         for i, val in enumerate(self.loser_score):
             self.loser_score_cell[i].value = val
             sh.update_cells(self.loser_score_cell)
+        time.sleep(60)
 
 class brown_league:
 
@@ -1002,6 +1001,7 @@ class lime_league:
         for i, val in enumerate(self.loser_score):
             self.loser_score_cell[i].value = val
             sh.update_cells(self.loser_score_cell)
+        time.sleep(60)
 
 class maroon_league:
 
@@ -1124,7 +1124,6 @@ class maroon_league:
         for i, val in enumerate(self.loser_score):
             self.loser_score_cell[i].value = val
             sh.update_cells(self.loser_score_cell)
-        time.sleep(60)
 
 class navy_league:
 
@@ -1247,7 +1246,7 @@ class navy_league:
         for i, val in enumerate(self.loser_score):
             self.loser_score_cell[i].value = val
             sh.update_cells(self.loser_score_cell)
-
+        time.sleep(60)
 class orange_league:
 
     def __init__(self,*args):
@@ -1737,6 +1736,7 @@ class teal_league:
         for i, val in enumerate(self.loser_score):
             self.loser_score_cell[i].value = val
             sh.update_cells(self.loser_score_cell)
+        time.sleep(60)
 
 class white_league:
 
@@ -1859,7 +1859,7 @@ class white_league:
         for i, val in enumerate(self.loser_score):
             self.loser_score_cell[i].value = val
             sh.update_cells(self.loser_score_cell)
-        time.sleep(60)
+        
 
 class yellow_league:
 
@@ -1982,7 +1982,7 @@ class yellow_league:
         for i, val in enumerate(self.loser_score):
             self.loser_score_cell[i].value = val
             sh.update_cells(self.loser_score_cell)
-
+        print("Successfully completed.")
 if __name__ == "__main__":
     red_league().red_update()
     green_league().green_update()
