@@ -1491,6 +1491,497 @@ class purple_league:
         for i, val in enumerate(self.loser_score):
             self.loser_score_cell[i].value = val
             sh.update_cells(self.loser_score_cell)
+        time.sleep(60)
+
+
+class sky_league:
+
+    def __init__(self,*args):
+        self.args = args
+
+    def sky_update(self,*args):
+        self.sky_league = League(728304973456216064)
+        self.sky_rosters = self.sky_league.get_rosters()
+        self.sky_users = self.sky_league.get_users()
+        self.sky_standings = self.sky_league.get_standings(self.sky_rosters,self.sky_users)
+        self.sky_matchups = self.sky_league.get_matchups(week)
+        self.sky_lineups = self.sky_league.get_lineups(self.sky_rosters,self.sky_matchups,self.sky_users,week)
+        self.sky_scoreboards = self.sky_league.get_scoreboards(self.sky_rosters,self.sky_matchups,self.sky_users,week)
+
+        self.score1 = self.sky_scoreboards[1][0]
+        self.score2 = self.sky_scoreboards[1][1]
+        self.score3 = self.sky_scoreboards[2][0]
+        self.score4 = self.sky_scoreboards[2][1]
+        self.score5 = self.sky_scoreboards[3][0]
+        self.score6 = self.sky_scoreboards[3][1]
+        self.score7 = self.sky_scoreboards[4][0]
+        self.score8 = self.sky_scoreboards[4][1]
+        self.score9 = self.sky_scoreboards[5][0]
+        self.score10 = self.sky_scoreboards[5][1]
+        self.score11 = self.sky_scoreboards[6][0]
+        self.score12 = self.sky_scoreboards[6][1]
+
+        self.winner_name = []
+        self.loser_name = []
+        self.winner_score =[]
+        self.loser_score = []
+       
+       #comparing each of the matchups to decide a winner and loser, then appending them to the correct lists. 
+        if self.score1[1] > self.score2[1]:
+           self.winner_name.append(self.score1[0])
+           self.winner_score.append(self.score1[1])
+           self.loser_name.append(self.score2[0])
+           self.loser_score.append(self.score2[1])
+        else: 
+            self.winner_name.append(self.score2[0])
+            self.winner_score.append(self.score2[1])
+            self.loser_name.append(self.score1[0])
+            self.loser_score.append(self.score1[1])
+
+        if self.score3[1] > self.score4[1]:
+           self.winner_name.append(self.score3[0])
+           self.winner_score.append(self.score3[1])
+           self.loser_name.append(self.score4[0])
+           self.loser_score.append(self.score4[1])
+        else: 
+            self.winner_name.append(self.score4[0])
+            self.winner_score.append(self.score4[1])
+            self.loser_name.append(self.score3[0])
+            self.loser_score.append(self.score3[1])
+        
+        if self.score5[1] > self.score6[1]:
+           self.winner_name.append(self.score5[0])
+           self.winner_score.append(self.score5[1])
+           self.loser_name.append(self.score6[0])
+           self.loser_score.append(self.score6[1])
+        else: 
+            self.winner_name.append(self.score6[0])
+            self.winner_score.append(self.score6[1])
+            self.loser_name.append(self.score5[0])
+            self.loser_score.append(self.score5[1])
+
+        if self.score7[1] > self.score8[1]:
+           self.winner_name.append(self.score7[0])
+           self.winner_score.append(self.score7[1])
+           self.loser_name.append(self.score8[0])
+           self.loser_score.append(self.score8[1])
+        else: 
+            self.winner_name.append(self.score8[0])
+            self.winner_score.append(self.score8[1])
+            self.loser_name.append(self.score7[0])
+            self.loser_score.append(self.score7[1])
+        
+        if self.score9[1] > self.score10[1]:
+           self.winner_name.append(self.score9[0])
+           self.winner_score.append(self.score9[1])
+           self.loser_name.append(self.score10[0])
+           self.loser_score.append(self.score10[1])
+        else: 
+            self.winner_name.append(self.score10[0])
+            self.winner_score.append(self.score10[1])
+            self.loser_name.append(self.score9[0])
+            self.loser_score.append(self.score9[1])
+
+        if self.score11[1] > self.score12[1]:
+           self.winner_name.append(self.score11[0])
+           self.winner_score.append(self.score11[1])
+           self.loser_name.append(self.score12[0])
+           self.loser_score.append(self.score12[1])
+        else: 
+            self.winner_name.append(self.score12[0])
+            self.winner_score.append(self.score12[1])
+            self.loser_name.append(self.score11[0])
+            self.loser_score.append(self.score11[1])
+
+       #Delcaring the cells for the list to be committed too 
+        self.winner_cell = sh.range('U80:U85')
+        self.loser_cell = sh.range('W80:W85')
+        self.winner_score_cell = sh.range('V80:V85')
+        self.loser_score_cell = sh.range('X80:X85')
+       
+
+        for i, val in enumerate(self.winner_name):
+            self.winner_cell[i].value = val
+            sh.update_cells(self.winner_cell)
+        
+        for i, val in enumerate(self.loser_name):
+            self.loser_cell[i].value = val
+            sh.update_cells(self.loser_cell)
+
+        for i, val in enumerate(self.winner_score):
+            self.winner_score_cell[i].value = val
+            sh.update_cells(self.winner_score_cell)
+
+        for i, val in enumerate(self.loser_score):
+            self.loser_score_cell[i].value = val
+            sh.update_cells(self.loser_score_cell)
+
+class teal_league:
+
+    def __init__(self,*args):
+        self.args = args
+
+    def teal_update(self,*args):
+        self.teal_league = League(728305668985085952)
+        self.teal_rosters = self.teal_league.get_rosters()
+        self.teal_users = self.teal_league.get_users()
+        self.teal_standings = self.teal_league.get_standings(self.teal_rosters,self.teal_users)
+        self.teal_matchups = self.teal_league.get_matchups(week)
+        self.teal_lineups = self.teal_league.get_lineups(self.teal_rosters,self.teal_matchups,self.teal_users,week)
+        self.teal_scoreboards = self.teal_league.get_scoreboards(self.teal_rosters,self.teal_matchups,self.teal_users,week)
+
+        self.score1 = self.teal_scoreboards[1][0]
+        self.score2 = self.teal_scoreboards[1][1]
+        self.score3 = self.teal_scoreboards[2][0]
+        self.score4 = self.teal_scoreboards[2][1]
+        self.score5 = self.teal_scoreboards[3][0]
+        self.score6 = self.teal_scoreboards[3][1]
+        self.score7 = self.teal_scoreboards[4][0]
+        self.score8 = self.teal_scoreboards[4][1]
+        self.score9 = self.teal_scoreboards[5][0]
+        self.score10 = self.teal_scoreboards[5][1]
+        self.score11 = self.teal_scoreboards[6][0]
+        self.score12 = self.teal_scoreboards[6][1]
+
+        self.winner_name = []
+        self.loser_name = []
+        self.winner_score =[]
+        self.loser_score = []
+       
+       #comparing each of the matchups to decide a winner and loser, then appending them to the correct lists. 
+        if self.score1[1] > self.score2[1]:
+           self.winner_name.append(self.score1[0])
+           self.winner_score.append(self.score1[1])
+           self.loser_name.append(self.score2[0])
+           self.loser_score.append(self.score2[1])
+        else: 
+            self.winner_name.append(self.score2[0])
+            self.winner_score.append(self.score2[1])
+            self.loser_name.append(self.score1[0])
+            self.loser_score.append(self.score1[1])
+
+        if self.score3[1] > self.score4[1]:
+           self.winner_name.append(self.score3[0])
+           self.winner_score.append(self.score3[1])
+           self.loser_name.append(self.score4[0])
+           self.loser_score.append(self.score4[1])
+        else: 
+            self.winner_name.append(self.score4[0])
+            self.winner_score.append(self.score4[1])
+            self.loser_name.append(self.score3[0])
+            self.loser_score.append(self.score3[1])
+        
+        if self.score5[1] > self.score6[1]:
+           self.winner_name.append(self.score5[0])
+           self.winner_score.append(self.score5[1])
+           self.loser_name.append(self.score6[0])
+           self.loser_score.append(self.score6[1])
+        else: 
+            self.winner_name.append(self.score6[0])
+            self.winner_score.append(self.score6[1])
+            self.loser_name.append(self.score5[0])
+            self.loser_score.append(self.score5[1])
+
+        if self.score7[1] > self.score8[1]:
+           self.winner_name.append(self.score7[0])
+           self.winner_score.append(self.score7[1])
+           self.loser_name.append(self.score8[0])
+           self.loser_score.append(self.score8[1])
+        else: 
+            self.winner_name.append(self.score8[0])
+            self.winner_score.append(self.score8[1])
+            self.loser_name.append(self.score7[0])
+            self.loser_score.append(self.score7[1])
+        
+        if self.score9[1] > self.score10[1]:
+           self.winner_name.append(self.score9[0])
+           self.winner_score.append(self.score9[1])
+           self.loser_name.append(self.score10[0])
+           self.loser_score.append(self.score10[1])
+        else: 
+            self.winner_name.append(self.score10[0])
+            self.winner_score.append(self.score10[1])
+            self.loser_name.append(self.score9[0])
+            self.loser_score.append(self.score9[1])
+
+        if self.score11[1] > self.score12[1]:
+           self.winner_name.append(self.score11[0])
+           self.winner_score.append(self.score11[1])
+           self.loser_name.append(self.score12[0])
+           self.loser_score.append(self.score12[1])
+        else: 
+            self.winner_name.append(self.score12[0])
+            self.winner_score.append(self.score12[1])
+            self.loser_name.append(self.score11[0])
+            self.loser_score.append(self.score11[1])
+
+       #Delcaring the cells for the list to be committed too 
+        self.winner_cell = sh.range('U86:U91')
+        self.loser_cell = sh.range('W86:W91')
+        self.winner_score_cell = sh.range('V86:V91')
+        self.loser_score_cell = sh.range('X86:X91')
+       
+
+        for i, val in enumerate(self.winner_name):
+            self.winner_cell[i].value = val
+            sh.update_cells(self.winner_cell)
+        
+        for i, val in enumerate(self.loser_name):
+            self.loser_cell[i].value = val
+            sh.update_cells(self.loser_cell)
+
+        for i, val in enumerate(self.winner_score):
+            self.winner_score_cell[i].value = val
+            sh.update_cells(self.winner_score_cell)
+
+        for i, val in enumerate(self.loser_score):
+            self.loser_score_cell[i].value = val
+            sh.update_cells(self.loser_score_cell)
+
+class white_league:
+
+    def __init__(self,*args):
+        self.args = args
+
+    def white_update(self,*args):
+        self.white_league = League(728306032106962944)
+        self.white_rosters = self.white_league.get_rosters()
+        self.white_users = self.white_league.get_users()
+        self.white_standings = self.white_league.get_standings(self.white_rosters,self.white_users)
+        self.white_matchups = self.white_league.get_matchups(week)
+        self.white_lineups = self.white_league.get_lineups(self.white_rosters,self.white_matchups,self.white_users,week)
+        self.white_scoreboards = self.white_league.get_scoreboards(self.white_rosters,self.white_matchups,self.white_users,week)
+
+        self.score1 = self.white_scoreboards[1][0]
+        self.score2 = self.white_scoreboards[1][1]
+        self.score3 = self.white_scoreboards[2][0]
+        self.score4 = self.white_scoreboards[2][1]
+        self.score5 = self.white_scoreboards[3][0]
+        self.score6 = self.white_scoreboards[3][1]
+        self.score7 = self.white_scoreboards[4][0]
+        self.score8 = self.white_scoreboards[4][1]
+        self.score9 = self.white_scoreboards[5][0]
+        self.score10 = self.white_scoreboards[5][1]
+        self.score11 = self.white_scoreboards[6][0]
+        self.score12 = self.white_scoreboards[6][1]
+
+        self.winner_name = []
+        self.loser_name = []
+        self.winner_score =[]
+        self.loser_score = []
+       
+       #comparing each of the matchups to decide a winner and loser, then appending them to the correct lists. 
+        if self.score1[1] > self.score2[1]:
+           self.winner_name.append(self.score1[0])
+           self.winner_score.append(self.score1[1])
+           self.loser_name.append(self.score2[0])
+           self.loser_score.append(self.score2[1])
+        else: 
+            self.winner_name.append(self.score2[0])
+            self.winner_score.append(self.score2[1])
+            self.loser_name.append(self.score1[0])
+            self.loser_score.append(self.score1[1])
+
+        if self.score3[1] > self.score4[1]:
+           self.winner_name.append(self.score3[0])
+           self.winner_score.append(self.score3[1])
+           self.loser_name.append(self.score4[0])
+           self.loser_score.append(self.score4[1])
+        else: 
+            self.winner_name.append(self.score4[0])
+            self.winner_score.append(self.score4[1])
+            self.loser_name.append(self.score3[0])
+            self.loser_score.append(self.score3[1])
+        
+        if self.score5[1] > self.score6[1]:
+           self.winner_name.append(self.score5[0])
+           self.winner_score.append(self.score5[1])
+           self.loser_name.append(self.score6[0])
+           self.loser_score.append(self.score6[1])
+        else: 
+            self.winner_name.append(self.score6[0])
+            self.winner_score.append(self.score6[1])
+            self.loser_name.append(self.score5[0])
+            self.loser_score.append(self.score5[1])
+
+        if self.score7[1] > self.score8[1]:
+           self.winner_name.append(self.score7[0])
+           self.winner_score.append(self.score7[1])
+           self.loser_name.append(self.score8[0])
+           self.loser_score.append(self.score8[1])
+        else: 
+            self.winner_name.append(self.score8[0])
+            self.winner_score.append(self.score8[1])
+            self.loser_name.append(self.score7[0])
+            self.loser_score.append(self.score7[1])
+        
+        if self.score9[1] > self.score10[1]:
+           self.winner_name.append(self.score9[0])
+           self.winner_score.append(self.score9[1])
+           self.loser_name.append(self.score10[0])
+           self.loser_score.append(self.score10[1])
+        else: 
+            self.winner_name.append(self.score10[0])
+            self.winner_score.append(self.score10[1])
+            self.loser_name.append(self.score9[0])
+            self.loser_score.append(self.score9[1])
+
+        if self.score11[1] > self.score12[1]:
+           self.winner_name.append(self.score11[0])
+           self.winner_score.append(self.score11[1])
+           self.loser_name.append(self.score12[0])
+           self.loser_score.append(self.score12[1])
+        else: 
+            self.winner_name.append(self.score12[0])
+            self.winner_score.append(self.score12[1])
+            self.loser_name.append(self.score11[0])
+            self.loser_score.append(self.score11[1])
+
+       #Delcaring the cells for the list to be committed too 
+        self.winner_cell = sh.range('U92:U97')
+        self.loser_cell = sh.range('W92:W97')
+        self.winner_score_cell = sh.range('V92:V97')
+        self.loser_score_cell = sh.range('X92:X97')
+       
+
+        for i, val in enumerate(self.winner_name):
+            self.winner_cell[i].value = val
+            sh.update_cells(self.winner_cell)
+        
+        for i, val in enumerate(self.loser_name):
+            self.loser_cell[i].value = val
+            sh.update_cells(self.loser_cell)
+
+        for i, val in enumerate(self.winner_score):
+            self.winner_score_cell[i].value = val
+            sh.update_cells(self.winner_score_cell)
+
+        for i, val in enumerate(self.loser_score):
+            self.loser_score_cell[i].value = val
+            sh.update_cells(self.loser_score_cell)
+        time.sleep(60)
+
+class yellow_league:
+
+    def __init__(self,*args):
+        self.args = args
+
+    def yellow_update(self,*args):
+        self.yellow_league = League(728306466766839808)
+        self.yellow_rosters = self.yellow_league.get_rosters()
+        self.yellow_users = self.yellow_league.get_users()
+        self.yellow_standings = self.yellow_league.get_standings(self.yellow_rosters,self.yellow_users)
+        self.yellow_matchups = self.yellow_league.get_matchups(week)
+        self.yellow_lineups = self.yellow_league.get_lineups(self.yellow_rosters,self.yellow_matchups,self.yellow_users,week)
+        self.yellow_scoreboards = self.yellow_league.get_scoreboards(self.yellow_rosters,self.yellow_matchups,self.yellow_users,week)
+
+        self.score1 = self.yellow_scoreboards[1][0]
+        self.score2 = self.yellow_scoreboards[1][1]
+        self.score3 = self.yellow_scoreboards[2][0]
+        self.score4 = self.yellow_scoreboards[2][1]
+        self.score5 = self.yellow_scoreboards[3][0]
+        self.score6 = self.yellow_scoreboards[3][1]
+        self.score7 = self.yellow_scoreboards[4][0]
+        self.score8 = self.yellow_scoreboards[4][1]
+        self.score9 = self.yellow_scoreboards[5][0]
+        self.score10 = self.yellow_scoreboards[5][1]
+        self.score11 = self.yellow_scoreboards[6][0]
+        self.score12 = self.yellow_scoreboards[6][1]
+
+        self.winner_name = []
+        self.loser_name = []
+        self.winner_score =[]
+        self.loser_score = []
+       
+       #comparing each of the matchups to decide a winner and loser, then appending them to the correct lists. 
+        if self.score1[1] > self.score2[1]:
+           self.winner_name.append(self.score1[0])
+           self.winner_score.append(self.score1[1])
+           self.loser_name.append(self.score2[0])
+           self.loser_score.append(self.score2[1])
+        else: 
+            self.winner_name.append(self.score2[0])
+            self.winner_score.append(self.score2[1])
+            self.loser_name.append(self.score1[0])
+            self.loser_score.append(self.score1[1])
+
+        if self.score3[1] > self.score4[1]:
+           self.winner_name.append(self.score3[0])
+           self.winner_score.append(self.score3[1])
+           self.loser_name.append(self.score4[0])
+           self.loser_score.append(self.score4[1])
+        else: 
+            self.winner_name.append(self.score4[0])
+            self.winner_score.append(self.score4[1])
+            self.loser_name.append(self.score3[0])
+            self.loser_score.append(self.score3[1])
+        
+        if self.score5[1] > self.score6[1]:
+           self.winner_name.append(self.score5[0])
+           self.winner_score.append(self.score5[1])
+           self.loser_name.append(self.score6[0])
+           self.loser_score.append(self.score6[1])
+        else: 
+            self.winner_name.append(self.score6[0])
+            self.winner_score.append(self.score6[1])
+            self.loser_name.append(self.score5[0])
+            self.loser_score.append(self.score5[1])
+
+        if self.score7[1] > self.score8[1]:
+           self.winner_name.append(self.score7[0])
+           self.winner_score.append(self.score7[1])
+           self.loser_name.append(self.score8[0])
+           self.loser_score.append(self.score8[1])
+        else: 
+            self.winner_name.append(self.score8[0])
+            self.winner_score.append(self.score8[1])
+            self.loser_name.append(self.score7[0])
+            self.loser_score.append(self.score7[1])
+        
+        if self.score9[1] > self.score10[1]:
+           self.winner_name.append(self.score9[0])
+           self.winner_score.append(self.score9[1])
+           self.loser_name.append(self.score10[0])
+           self.loser_score.append(self.score10[1])
+        else: 
+            self.winner_name.append(self.score10[0])
+            self.winner_score.append(self.score10[1])
+            self.loser_name.append(self.score9[0])
+            self.loser_score.append(self.score9[1])
+
+        if self.score11[1] > self.score12[1]:
+           self.winner_name.append(self.score11[0])
+           self.winner_score.append(self.score11[1])
+           self.loser_name.append(self.score12[0])
+           self.loser_score.append(self.score12[1])
+        else: 
+            self.winner_name.append(self.score12[0])
+            self.winner_score.append(self.score12[1])
+            self.loser_name.append(self.score11[0])
+            self.loser_score.append(self.score11[1])
+
+       #Delcaring the cells for the list to be committed too 
+        self.winner_cell = sh.range('U98:U103')
+        self.loser_cell = sh.range('W98:W103')
+        self.winner_score_cell = sh.range('V98:V103')
+        self.loser_score_cell = sh.range('X98:X103')
+       
+
+        for i, val in enumerate(self.winner_name):
+            self.winner_cell[i].value = val
+            sh.update_cells(self.winner_cell)
+        
+        for i, val in enumerate(self.loser_name):
+            self.loser_cell[i].value = val
+            sh.update_cells(self.loser_cell)
+
+        for i, val in enumerate(self.winner_score):
+            self.winner_score_cell[i].value = val
+            sh.update_cells(self.winner_score_cell)
+
+        for i, val in enumerate(self.loser_score):
+            self.loser_score_cell[i].value = val
+            sh.update_cells(self.loser_score_cell)
 
 if __name__ == "__main__":
     red_league().red_update()
@@ -1505,3 +1996,7 @@ if __name__ == "__main__":
     navy_league().navy_update()
     orange_league().orange_update()
     purple_league().purple_update()
+    sky_league().sky_update()
+    teal_league().teal_update()
+    white_league().white_update()
+    yellow_league().yellow_update()
