@@ -11,8 +11,8 @@ creds = ServiceAccountCredentials.from_json_keyfile_name('/volumes/alpha/program
 client = gspread.authorize(creds)
 
 sheet = client.open('RUFFL 2021 Season Sheet - Testing')
-sh  = sheet.worksheet('Week 2')
-week = 2
+sh  = sheet.worksheet('Week 4')
+week = 4
 
 class red_league:
 
@@ -115,10 +115,10 @@ class red_league:
             self.loser_score.append(self.score11[1])
 
        #Delcaring the cells for the list to be committed too 
-        self.winner_cell = sh.range('U74:U79')
-        self.loser_cell = sh.range('W74:W79')
-        self.winner_score_cell = sh.range('V74:V79')
-        self.loser_score_cell = sh.range('X74:X79')
+        self.winner_cell = sh.range('U70:U75')
+        self.loser_cell = sh.range('W70:W75')
+        self.winner_score_cell = sh.range('V70:V75')
+        self.loser_score_cell = sh.range('X70:X75')
        
         for i, val in enumerate(self.winner_name):
             self.winner_cell[i].value = val
@@ -237,10 +237,10 @@ class green_league:
             self.loser_score.append(self.score11[1])
 
        #Delcaring the cells for the list to be committed too 
-        self.winner_cell = sh.range('U38:U43')
-        self.loser_cell = sh.range('W38:W43')
-        self.winner_score_cell = sh.range('V38:V43')
-        self.loser_score_cell = sh.range('X38:X43')
+        self.winner_cell = sh.range('U34:U39')
+        self.loser_cell = sh.range('W34:W39')
+        self.winner_score_cell = sh.range('V34:V39')
+        self.loser_score_cell = sh.range('X34:X39')
        
 
         for i, val in enumerate(self.winner_name):
@@ -362,10 +362,10 @@ class black_league:
             self.loser_score.append(self.score11[1])
 
        #Delcaring the cells for the list to be committed too 
-        self.winner_cell = sh.range('U8:U13')
-        self.loser_cell = sh.range('W8:W13')
-        self.winner_score_cell = sh.range('V8:V13')
-        self.loser_score_cell = sh.range('X8:X13')
+        self.winner_cell = sh.range('U4:U9')
+        self.loser_cell = sh.range('W4:W9')
+        self.winner_score_cell = sh.range('V4:V9')
+        self.loser_score_cell = sh.range('X4:X9')
        
 
         for i, val in enumerate(self.winner_name):
@@ -485,10 +485,10 @@ class blue_league:
             self.loser_score.append(self.score11[1])
 
        #Delcaring the cells for the list to be committed too 
-        self.winner_cell = sh.range('U14:U19')
-        self.loser_cell = sh.range('W14:W19')
-        self.winner_score_cell = sh.range('V14:V19')
-        self.loser_score_cell = sh.range('X14:X19')
+        self.winner_cell = sh.range('U10:U15')
+        self.loser_cell = sh.range('W10:W15')
+        self.winner_score_cell = sh.range('V10:V15')
+        self.loser_score_cell = sh.range('X10:X15')
        
 
         for i, val in enumerate(self.winner_name):
@@ -609,10 +609,10 @@ class brown_league:
             self.loser_score.append(self.score11[1])
 
        #Delcaring the cells for the list to be committed too 
-        self.winner_cell = sh.range('U20:U25')
-        self.loser_cell = sh.range('W20:W25')
-        self.winner_score_cell = sh.range('V20:V25')
-        self.loser_score_cell = sh.range('X20:X25')
+        self.winner_cell = sh.range('U16:U21')
+        self.loser_cell = sh.range('W16:W21')
+        self.winner_score_cell = sh.range('V16:V21')
+        self.loser_score_cell = sh.range('X16:X21')
        
 
         for i, val in enumerate(self.winner_name):
@@ -732,10 +732,10 @@ class forest_league:
             self.loser_score.append(self.score11[1])
 
        #Delcaring the cells for the list to be committed too 
-        self.winner_cell = sh.range('U26:U31')
-        self.loser_cell = sh.range('W26:W31')
-        self.winner_score_cell = sh.range('V26:V31')
-        self.loser_score_cell = sh.range('X26:X31')
+        self.winner_cell = sh.range('U22:U27')
+        self.loser_cell = sh.range('W22:W27')
+        self.winner_score_cell = sh.range('V22:V27')
+        self.loser_score_cell = sh.range('X22:X27')
        
 
         for i, val in enumerate(self.winner_name):
@@ -856,10 +856,10 @@ class gray_league:
             self.loser_score.append(self.score11[1])
 
        #Delcaring the cells for the list to be committed too 
-        self.winner_cell = sh.range('U32:U37')
-        self.loser_cell = sh.range('W32:W37')
-        self.winner_score_cell = sh.range('V32:V37')
-        self.loser_score_cell = sh.range('X32:X37')
+        self.winner_cell = sh.range('U28:U33')
+        self.loser_cell = sh.range('W28:W33')
+        self.winner_score_cell = sh.range('V28:V33')
+        self.loser_score_cell = sh.range('X28:X33')
        
 
         for i, val in enumerate(self.winner_name):
@@ -980,10 +980,10 @@ class lime_league:
             self.loser_score.append(self.score11[1])
 
        #Delcaring the cells for the list to be committed too 
-        self.winner_cell = sh.range('U44:U49')
-        self.loser_cell = sh.range('W44:W49')
-        self.winner_score_cell = sh.range('V44:V49')
-        self.loser_score_cell = sh.range('X44:X49')
+        self.winner_cell = sh.range('U40:U45')
+        self.loser_cell = sh.range('W40:W45')
+        self.winner_score_cell = sh.range('V40:V45')
+        self.loser_score_cell = sh.range('X40:X45')
        
 
         for i, val in enumerate(self.winner_name):
@@ -1103,10 +1103,10 @@ class maroon_league:
             self.loser_score.append(self.score11[1])
 
        #Delcaring the cells for the list to be committed too 
-        self.winner_cell = sh.range('U50:U55')
-        self.loser_cell = sh.range('W50:W55')
-        self.winner_score_cell = sh.range('V50:V55')
-        self.loser_score_cell = sh.range('X50:X55')
+        self.winner_cell = sh.range('U46:U51')
+        self.loser_cell = sh.range('W46:W51')
+        self.winner_score_cell = sh.range('V46:V51')
+        self.loser_score_cell = sh.range('X46:X51')
        
 
         for i, val in enumerate(self.winner_name):
@@ -1225,10 +1225,10 @@ class navy_league:
             self.loser_score.append(self.score11[1])
 
        #Delcaring the cells for the list to be committed too 
-        self.winner_cell = sh.range('U56:U61')
-        self.loser_cell = sh.range('W56:W61')
-        self.winner_score_cell = sh.range('V56:V61')
-        self.loser_score_cell = sh.range('X56:X61')
+        self.winner_cell = sh.range('U52:U57')
+        self.loser_cell = sh.range('W52:W57')
+        self.winner_score_cell = sh.range('V52:V57')
+        self.loser_score_cell = sh.range('X52:X57')
        
 
         for i, val in enumerate(self.winner_name):
@@ -1347,10 +1347,10 @@ class orange_league:
             self.loser_score.append(self.score11[1])
 
        #Delcaring the cells for the list to be committed too 
-        self.winner_cell = sh.range('U62:U67')
-        self.loser_cell = sh.range('W62:W67')
-        self.winner_score_cell = sh.range('V62:V67')
-        self.loser_score_cell = sh.range('X62:X67')
+        self.winner_cell = sh.range('U58:U63')
+        self.loser_cell = sh.range('W58:W63')
+        self.winner_score_cell = sh.range('V58:V63')
+        self.loser_score_cell = sh.range('X58:X63')
        
 
         for i, val in enumerate(self.winner_name):
@@ -1469,10 +1469,10 @@ class purple_league:
             self.loser_score.append(self.score11[1])
 
        #Delcaring the cells for the list to be committed too 
-        self.winner_cell = sh.range('U68:U73')
-        self.loser_cell = sh.range('W68:W73')
-        self.winner_score_cell = sh.range('V68:V73')
-        self.loser_score_cell = sh.range('X68:X73')
+        self.winner_cell = sh.range('U64:U69')
+        self.loser_cell = sh.range('W64:W69')
+        self.winner_score_cell = sh.range('V64:V69')
+        self.loser_score_cell = sh.range('X64:X69')
        
 
         for i, val in enumerate(self.winner_name):
@@ -1593,10 +1593,10 @@ class sky_league:
             self.loser_score.append(self.score11[1])
 
        #Delcaring the cells for the list to be committed too 
-        self.winner_cell = sh.range('U80:U85')
-        self.loser_cell = sh.range('W80:W85')
-        self.winner_score_cell = sh.range('V80:V85')
-        self.loser_score_cell = sh.range('X80:X85')
+        self.winner_cell = sh.range('U76:U81')
+        self.loser_cell = sh.range('W76:W81')
+        self.winner_score_cell = sh.range('V76:V81')
+        self.loser_score_cell = sh.range('X76:X81')
        
 
         for i, val in enumerate(self.winner_name):
@@ -1715,10 +1715,10 @@ class teal_league:
             self.loser_score.append(self.score11[1])
 
        #Delcaring the cells for the list to be committed too 
-        self.winner_cell = sh.range('U86:U91')
-        self.loser_cell = sh.range('W86:W91')
-        self.winner_score_cell = sh.range('V86:V91')
-        self.loser_score_cell = sh.range('X86:X91')
+        self.winner_cell = sh.range('U82:U87')
+        self.loser_cell = sh.range('W82:W87')
+        self.winner_score_cell = sh.range('V82:V87')
+        self.loser_score_cell = sh.range('X82:X87')
        
 
         for i, val in enumerate(self.winner_name):
@@ -1838,10 +1838,10 @@ class white_league:
             self.loser_score.append(self.score11[1])
 
        #Delcaring the cells for the list to be committed too 
-        self.winner_cell = sh.range('U92:U97')
-        self.loser_cell = sh.range('W92:W97')
-        self.winner_score_cell = sh.range('V92:V97')
-        self.loser_score_cell = sh.range('X92:X97')
+        self.winner_cell = sh.range('U88:U93')
+        self.loser_cell = sh.range('W88:W93')
+        self.winner_score_cell = sh.range('V88:V93')
+        self.loser_score_cell = sh.range('X88:X93')
        
 
         for i, val in enumerate(self.winner_name):
@@ -1961,10 +1961,10 @@ class yellow_league:
             self.loser_score.append(self.score11[1])
 
        #Delcaring the cells for the list to be committed too 
-        self.winner_cell = sh.range('U98:U103')
-        self.loser_cell = sh.range('W98:W103')
-        self.winner_score_cell = sh.range('V98:V103')
-        self.loser_score_cell = sh.range('X98:X103')
+        self.winner_cell = sh.range('U94:U99')
+        self.loser_cell = sh.range('W94:W99')
+        self.winner_score_cell = sh.range('V94:V99')
+        self.loser_score_cell = sh.range('X94:X99')
        
 
         for i, val in enumerate(self.winner_name):
@@ -1984,18 +1984,18 @@ class yellow_league:
             sh.update_cells(self.loser_score_cell)
         print("Successfully completed.")
 if __name__ == "__main__":
-    red_league().red_update()
-    green_league().green_update()
-    black_league().black_update()
-    blue_league().blue_update()
-    brown_league().brown_update()
-    forest_league().forest_update()
-    gray_league().gray_update()
-    lime_league().lime_update()
-    maroon_league().maroon_update()
-    navy_league().navy_update()
-    orange_league().orange_update()
-    purple_league().purple_update()
+    #red_league().red_update()
+    #green_league().green_update()
+    #black_league().black_update()
+    #blue_league().blue_update()
+    #brown_league().brown_update()
+    #forest_league().forest_update()
+    #gray_league().gray_update()
+    #lime_league().lime_update()
+    #maroon_league().maroon_update()
+    #navy_league().navy_update()
+    #orange_league().orange_update()
+    #purple_league().purple_update()
     sky_league().sky_update()
     teal_league().teal_update()
     white_league().white_update()
